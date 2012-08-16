@@ -10,6 +10,6 @@ Example:
 
 >`lru = cache.LruCache(item_max=5)`
       
->`@lru.fn_cache` 
->`def test_fn(x,y):`  
+>`@lru.fn_cache`        
+>`def test_fn(x,y):`          
 >`return x,y`
