@@ -17,11 +17,14 @@ class LruCache(object):
         if item_max <=0:
              raise ValueError('item_max must be > 0')
         self.lock = threading.Lock()
+        self.item_max = item_max
+        self.clear()
+
+    def clear(self):
         self.hits = 0
         self.miss = 0
         self.cache = {}
         self.keys = []
-        self.item_max = item_max
         self.used = 0
         self.remove = 0
 
