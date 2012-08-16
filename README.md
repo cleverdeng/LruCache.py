@@ -6,8 +6,7 @@ Implements LRU(Last-recently-used) cache algorithm, Support the thread safe, Wit
 
 Example:
 
-``
-import lru as cache
+``import lru as cache``
 
 lru = cache.LruCache(item_max=5)
       
