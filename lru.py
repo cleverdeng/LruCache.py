@@ -92,31 +92,3 @@ Single process cache used status:
     remove:%s
 """ % (self.item_max, self.used, ','.join(self.keys), self.miss, self.hits, self.remove)
         print used_status
-
-
-
-
-
-
-lru = LruCache(item_max=5)
-
-@lru.fn_cache
-def test_fn(x,y):
-    return x,y
-
-if __name__ == "__main__":
-    print test_fn(1,2)
-    print test_fn(1,2)
-    print test_fn(3,4)
-    print 'get key:test value:%s' % lru.get("test1") 
-    lru.put('test1', 1)
-    lru.put("test2", 2)
-    lru.put("test3", 3)
-    lru.put("test4", 4)
-    lru.put("test5", 5)
-    print 'get key:test value:%s' % lru.get("test1") 
-    lru.put("test6", 6)
-    lru.put("test7", 7) 
-    print 'get key:test6 value:%s' % lru.get("test6") 
-    print 'get key:test3 value:%s' % lru.get("test3") 
-    lru.status()
