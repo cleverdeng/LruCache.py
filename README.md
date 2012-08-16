@@ -12,4 +12,4 @@ Example:
       
 >``@lru.fn_cache``    
 >``def test_fn(x,y):``    
->``        return x,y``
+>        ``return x,y``
